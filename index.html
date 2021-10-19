@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Flexão-estabilidade</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <div class="cabecalho">
+
+    <head>
+      <h1>
+        Verificação de estabilidade &nbsp &nbsp &nbsp
+      </h1>
+      <div>
+        <h5> <a href="mailto:luizhcoelho@gmail.com?subject=Assunto&body=Digite sua mensagem">
+            Luiz Herkenhoff Coelho</a> </h5>
+      </div>
+    </head>
+
+    <main>
+      <h2> Materiais </h2>
+      <a> Concreto: </a>
+
+      <select id="concreto">
+        <option value="20">C20</option>
+        <option value="25">C25</option>
+        <option selected="selected" value="30">C30</option>
+        <option value="35">C35</option>
+        <option value="40">C40</option>
+        <option value="45">C45</option>
+        <option value="50">C50</option>
+        <option value="55">C55</option>
+        <option value="60">C60</option>
+        <option value="70">C70</option>
+        <option value="80">C80</option>
+        <option value="90">C90</option>
+
+      </select>
+      <br> <br>
+      <a>Aço: &nbsp &nbsp &nbsp &nbsp</a>
+      <select id="aco">
+        <option selected="selected" value="500">CA-50</option>
+        <option value="600">CA-60</option>
+
+      </select>
+
+      </form>
+      <h2>Dados geométricos</h2>
+      <div class="secaoTransversal">
+        <img src="https://i.imgur.com/2kUJg7X.jpg" />
+
+        <div class="dadosGeometricos">
+          b [cm]:
+          <input type="number" id="b" placeholder="b [cm]" </input> </br>
+          d [cm]:
+          <input type="number" id="d" placeholder="d [cm]" </input> </br>
+          </input>
+          d' [cm]:
+          <input type="number" id="d1" placeholder="d' [cm]" </input></br></br>
+          </input>
+          As [cm²]:
+          <input type="number" id="As" placeholder="As [cm²]" </input>
+          </input></br>
+          As' [cm²]:
+          <input type="number" id="As1" placeholder="As' [cm²]" </input>
+
+        </div>
+      </div>
+
+      <h2></h2>
+
+      <button type=" submit" onclick="dimensionar()">Calcular o momento resistente </button> &nbsp &nbsp &nbsp
+
+      <div class="dados" id="resultado"></div>
+    </main>
+
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
