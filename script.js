@@ -84,14 +84,14 @@ function calculosPreliminares() {
 function calculoDoMomento() {
   var kxInf = 0;
   var kxSup = 1;
-  while (kxSup - kxInf > 0.00001) {
+  while (kxSup - kxInf > 0.000001) {
     var kx = (kxInf + kxSup) / 2;
     Rcc = (alphaC * lambda * kx * b * d * fck) / 1.4;
     if (kx <= kxLim2) {
       var dominio = "2";
       var esc = ((kx - d1 / d) / (1 - kx)) * 10;
-      if (esc >= eyd) {
-        Rsc = (as1 * fyk) / 1.15;
+      if (Math.abs(esc) >= eyd) {
+        Rsc = (Math.sign(esc) * (as1 * fyk)) / 1.15;
       } else {
         Rsc = as1 * esc * 210;
       }
@@ -100,8 +100,8 @@ function calculoDoMomento() {
       var dominio = "4";
       var esd = ((1 - kx) / kx) * ecu;
       var esc = ((kx - d1 / d) / kx) * ecu;
-      if (esc >= eyd) {
-        Rsc = (as1 * fyk) / 1.15;
+      if (Math.abs(esc) >= eyd) {
+        Rsc = (Math.sign(esc) * (as1 * fyk)) / 1.15;
       } else {
         Rsc = as1 * esc * 210;
       }
@@ -114,8 +114,8 @@ function calculoDoMomento() {
       var dominio = "3";
       Rst = (as * fyk) / 1.15;
       esc = ((kx - d1 / d) / kx) * ecu;
-      if (esc >= eyd) {
-        Rsc = (as1 * fyk) / 1.15;
+      if (Math.abs(esc) >= eyd) {
+        Rsc = (Math.sign(esc) * (as1 * fyk)) / 1.15;
       } else {
         Rsc = as1 * esc * 210;
       }
